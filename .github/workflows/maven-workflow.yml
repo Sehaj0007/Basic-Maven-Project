@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Step 1 - Get code from GitHub
@@ -31,4 +31,6 @@ jobs:
           mvn package
           mvn verify
           mvn install
+          mvn site
+          mvn deploy
           mvn clean
